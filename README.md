@@ -10,27 +10,27 @@ This project uses the Snowflake tpch dataset (tpch_sf1 schema).
 
 ## Project Implementation
 
-### Step 1 : Setup dbt + Snowflake
+#### Step 1 : Setup dbt + Snowflake
 
 Creates a Snowflake environment with a warehouse, database, and user role for dbt to access and manage data.
 
 
-### Step 2 : Configure dbt_project.yml and packages
+#### Step 2 : Configure dbt_project.yml and packages
 
 Defines a configuration file (dbt_profile.yaml) that specifies how dbt interacts with Snowflake, including the warehouse and schema to use for staging and production data.
 
-### Step 3 : Create source and staging tables
+#### Step 3 : Create source and staging tables
 
 Creates source and staging models:
 
 - Source models define how to access raw data from Snowflake's sample data (tpch_sf1 schema).
 - Staging models define SQL queries to transform raw data into a format suitable for further processing.
 
-### Step 4 : Macro functions
+#### Step 4 : Macro functions
 
 Creates a reusable function (macro) to calculate discounted amounts based on extended price and discount percentage.
 
-### Step 5 : Transformed models (fact tables, data marts)
+#### Step 5 : Transformed models (fact tables, data marts)
 
 Creates dbt models for data transformation:
 
@@ -38,14 +38,14 @@ Creates dbt models for data transformation:
 - Data marts aggregate and summarize data for specific use cases.
 - Fact tables integrate data from various sources for analysis.
 
-### Step 6 : Generic and singular tests
+#### Step 6 : Generic and singular tests
 
 Creates generic and singular tests for data quality:
 
 - Generic tests (defined in YAML) enforce data integrity rules like uniqueness, not null values, and relationships between tables.
 - Singular tests (written in SQL) identify specific data quality issues like invalid dates or orders with discounts.
 
-### Step 7 : Deploy models using Airflow
+#### Step 7 : Deploy models using Airflow
 
 Configures Airflow to run the dbt pipeline, I used Astronomer Cosmos for deploying the dbt project into airflow:
 
