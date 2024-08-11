@@ -1,6 +1,6 @@
 ## Project Desciption
 
-This project is an ETL Pipeline using Dbt (dbt-core) for transformation, Snowflake for data warehousing and Airflow for orchestration.
+This project is an ELT Pipeline using Dbt (dbt-core) for transformation, Snowflake for data warehousing and Airflow for orchestration.
 
 ![1_I-KTOig5A7i3UFAisWaK7g](https://github.com/elmezianech/snowflake_dbt_airflow_etl/assets/120784838/d4deb775-ef1b-4595-a440-bb974f24e659)
 
